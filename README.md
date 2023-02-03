@@ -1,11 +1,11 @@
-# Ticket Dispatch System
+# Realtime Chat Demo (Sockets.io/Auth0)
 
 ## Introduction
 
 This project is a chat component that utilizes the power of Sockets.io and Auth0 to provide secure and real-time messaging. Right now it operates more of a chatroom as this was meant to be a learning experience but I may end up adding some way of connecting with random users or have some private message style.
 
 ## Features
-- Real-time chat component using Auth0 as authentication
+- Real-time chat component using Auth0 for authentication
 
 ## Technologies
 - React
@@ -40,17 +40,7 @@ AUTH0_CLIENT_SECRET=XXX
 ```
 ### Running the Chat Component
 
-To run the chat component, you will need to run the following commands in the terminal in the project folder:
-
-```
-npm run dev
-```
-AND
-```
-node .\pages\api\chat-socket.js
-```
-
-Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like for `npm run dev`:
+Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like when you run  `npm run dev`:
 
 ```JSON
 "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\""
