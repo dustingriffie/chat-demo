@@ -63,5 +63,10 @@ npm install concurrently
 
 By running these two commands, the chat component and server will both be started, allowing you to start using the chat component.
 
+## Conclusion
+
+In conclusion, I'm pretty impressed with both Auth0 and Sockets.io. There are still some features that I'd like to add in the future, such as a language/profanity filter and some customizable options within a config file.
+
+Overall, as this was a learning experience to learn Auth0 and Websockets, I am happy with how this came out and will continue to add upon it.
 
 
