@@ -1,4 +1,4 @@
-# Ticket Dispatch System
+# Realtime Chat Demo (Sockets.io/Auth0)
 
 ## Introduction
 
