@@ -52,6 +52,7 @@ node .\pages\api\chat-socket.js
 
 Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like for `npm run dev`:
 
+```JSON
 "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\""
 ```
 
