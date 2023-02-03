@@ -5,24 +5,16 @@
 This project is a chat component that utilizes the power of Sockets.io and Auth0 to provide secure and real-time messaging.
 
 ## Features
-- Create tickets
-- Assign tickets to technicians
-- View dispatched tickets on Google Maps
-- Easily accessible interface for technicians
+- Real-time chat component using Auth0 as authentication
 
 ## Technologies
 - React
 - Next.js
-- Firebase
-- Firestore
-- Firebase Admin
+- Auth0
+- Sockets.io
 
 ## Prerequisites
-- Google API Key
-- Firebase API Key
-- 'tickets' collection in Firestore
-- 'dispatch_events' collection in Firestore
-- Currently no method of user management so user custom claims (ex. admin (dispatch) and technician) will need to be set through the API. This will change as project gets further updates.
+- Auth0 Account Setup + API Details
 
 ## Getting Started
 
