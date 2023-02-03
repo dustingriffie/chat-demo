@@ -40,7 +40,7 @@ AUTH0_CLIENT_SECRET=XXX
 ```
 ### Running the Chat Component
 
-To run the chat component, you will need to run the following command in the terminal in the project folder:
+To run the chat component, you will need to run the following commands in the terminal in the project folder:
 
 ```
 npm run dev
