@@ -1,16 +1,24 @@
 {
-  "name": "chat-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-chat-demo",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@auth0/nextjs-auth0": "^2.2.1",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "socket.io": "^4.5.4"
+    "next": "13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4",
+    "websocket": "^1.0.34"
   }
 }

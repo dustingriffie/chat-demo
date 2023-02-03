@@ -1,0 +1,42 @@
+.header {
+  height: 92vh;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.darkButton {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.darkButton:hover {
+  background-color: #555;
+}
+
+

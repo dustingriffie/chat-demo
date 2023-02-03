@@ -1,15 +1,23 @@
+
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
-
-// Serve the contents of the public directory as static files
-app.use(express.static('public'));
-
-// Start the Express server
 const port = 3000;
-app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+
+app.use(bodyParser.json());
+
+const messages = [];
+
+app.get('/', (req, res) => {
+  res.sendFile(`public/index.html`);
 });
 
 app.post('/send-message', (req, res) => {
-    // Your code for handling incoming messages goes here
-  });
+  messages.push(req.body.message);
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

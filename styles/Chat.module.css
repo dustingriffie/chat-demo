@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    height: 92vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c34
+  }
+  
+  .chatbox {
+    background-color: #333;
+    color: #fff;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+    overflow: hidden;
+  }
+  
+  .messagelist {
+    list-style: none;
+    padding: 20px;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .messagelist li {
+    animation: slide-in 0.5s ease-out;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .messageform {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid rgb(136, 134, 134);
+  }
+  
+  .messageform input[type='text'] {
+    flex: 1;
+    padding: 10px;
+    background-color: #7173772e;
+    color: #fff;
+    border: none;
+  }
+
+  .messageform input[type='text']:hover {
+    border-radius: 2px;
+  }
+  
+  .messageform button[type='submit'] {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+  }
+
+
+  
+  .messageform button[type='submit']:hover {
+    background-color: #282c34;
+    color: #fff;
+    
+    
+  }
+  
