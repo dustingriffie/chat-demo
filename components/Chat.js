@@ -11,6 +11,9 @@ function Chat() {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const messageListRef = useRef(null);
+  const [messageTime, setMessageTime] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'}))
+  var Filter = require('bad-words'),
+    filter = new Filter();
 
   useEffect(() => {
     socket.on('message', (message) => {
@@ -23,9 +26,12 @@ function Chat() {
   }, [messages]);
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
+
+    setMessageTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'}))
     if (user && message) {
-      socket.emit('message', { message: message, userEmail: user.email, sentTime: new Date() });
+      socket.emit('message', { message: filter.clean(message), userEmail: user.email, sentTime: messageTime });
       setMessage('');
     }
   };
@@ -35,7 +41,10 @@ function Chat() {
   <div className={styles.chatbox}>
     <ul className={styles.messagelist} ref={messageListRef}>
       {messages.map((message, index) => (
-        <li key={index}>{message.userEmail}: {message.message}</li>
+                  <li key={index}>
+                  {message.userEmail}: {message.message} 
+                  <div className={styles.sentTime}>{message.sentTime}</div>
+                </li>
       ))}
     </ul>
     <form className={styles.messageform} onSubmit={handleSubmit}>
