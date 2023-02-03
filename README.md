@@ -40,17 +40,7 @@ AUTH0_CLIENT_SECRET=XXX
 ```
 ### Running the Chat Component
 
-To run the chat component, you will need to run the following commands in the terminal in the project folder:
-
-```
-npm run dev
-```
-AND
-```
-node .\pages\api\chat-socket.js
-```
-
-Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like for `npm run dev`:
+Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like when you run  `npm run dev`:
 
 ```JSON
 "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\""
