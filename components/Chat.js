@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import socketIOClient from "socket.io-client";
 import styles from '../styles/Chat.module.css'
 import { useUser } from '@auth0/nextjs-auth0/client';
@@ -10,6 +10,7 @@ function Chat() {
   const { user } = useUser();
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const messageListRef = useRef(null);
 
   useEffect(() => {
     socket.on('message', (message) => {
@@ -17,13 +18,14 @@ function Chat() {
     });
   }, [messages]);
 
+  useEffect(() => {
+    messageListRef.current.scrollTop = messageListRef.current.scrollHeight;
+  }, [messages]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user && message) {
-      socket.emit('message', {
-        email: user.email,
-        text: message,
-      });
+      socket.emit('message', { message: message, userEmail: user.email, sentTime: new Date() });
       setMessage('');
     }
   };
@@ -31,9 +33,9 @@ function Chat() {
   return (
 <div className={styles.container}>
   <div className={styles.chatbox}>
-    <ul className={styles.messagelist}>
+    <ul className={styles.messagelist} ref={messageListRef}>
       {messages.map((message, index) => (
-        <li key={index}>{message.email}: {message.text}</li>
+        <li key={index}>{message.userEmail}: {message.message}</li>
       ))}
     </ul>
     <form className={styles.messageform} onSubmit={handleSubmit}>
