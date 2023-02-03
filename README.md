@@ -52,11 +52,11 @@ node .\pages\api\chat-socket.js
 
 Personally, I setup a custom script in `package.json` that runs both using Concurrently. To do this:
 
-First, install Cocurrently:
+1. Install Cocurrently:
 ```
 npm install concurrently
 ```
-Next, add this command to your `scripts` section in `package.json`:
+1. Add this command to your `scripts` section in `package.json`:
 ```JSON
 "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\""
 ```
