@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Ticket Dispatch System! This project is a web-based platform for dispatching tickets and technicians. Users can create tickets and assign them to technicians, and technicians can access and dispatch tickets from their easily accessible Google Maps window.
+This project is a chat component that utilizes the power of Sockets.io and Auth0 to provide secure and real-time messaging.
 
 ## Features
 - Create tickets
