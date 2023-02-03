@@ -1,7 +1,5 @@
 # Ticket Dispatch System
 
-⚠️ DISCLAIMER: This was a proof of concept demo and not all proper security methods were observed. Use caution using in a production environment!
-
 ## Introduction
 
 Welcome to the Ticket Dispatch System! This project is a web-based platform for dispatching tickets and technicians. Users can create tickets and assign them to technicians, and technicians can access and dispatch tickets from their easily accessible Google Maps window.
