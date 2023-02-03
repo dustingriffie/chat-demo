@@ -5,7 +5,7 @@
 This project is a chat component that utilizes the power of Sockets.io and Auth0 to provide secure and real-time messaging. Right now it operates more of a chatroom as this was meant to be a learning experience but I may end up adding some way of connecting with random users or have some private message style.
 
 ## Features
-- Real-time chat component using Auth0 as authentication
+- Real-time chat component using Auth0 for authentication
 
 ## Technologies
 - React
