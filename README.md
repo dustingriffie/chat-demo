@@ -50,7 +50,7 @@ AND
 node .\pages\api\chat-socket.js
 ```
 
-Personally, I setup a customer command in `package.json` that runs both using Concurrently. To do this:
+Personally, I setup a custom script in `package.json` that runs both using Concurrently. To do this:
 
 First, install Cocurrently:
 ```
