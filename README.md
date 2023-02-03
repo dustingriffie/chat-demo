@@ -50,18 +50,11 @@ AND
 node .\pages\api\chat-socket.js
 ```
 
-Personally, I setup a custom script in `package.json` that runs both using Concurrently. To do this:
+Personally, I setup a custom script in `package.json` that runs both using Concurrently. This is what that looks like for `npm run dev`:
 
-1. Install Cocurrently:
-```
-npm install concurrently
-```
-1. Add this command to your `scripts` section in `package.json`:
 ```JSON
 "dev": "concurrently \"node .\\pages\\api\\chat-socket.js\" \"next dev\""
 ```
-
-By running these two commands, the chat component and server will both be started, allowing you to start using the chat component.
 
 ## Conclusion
 
